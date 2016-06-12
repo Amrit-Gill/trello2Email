@@ -38,23 +38,3 @@ Please visit us <a href="http://www.mysite.com">online</a>!"""
     server.login(FROM,password)
     server.sendmail(FROM, [TO], MESSAGE.as_string())
     server.quit()
- 
-if __name__ == "__main__":
-    """Executes if the script is run as main script (for testing purposes)"""
- 
-    email_content = """
-<body>
-
-<h3>My First Heading</h3>
-<li>text</li>
-<li>text</li>
-<li>text</li>
-<p style="text-indent: 2em;">My first paragraph.</p>
-
-</body>
-"""
- 
-    TO = 'rec@gmail.com'
-    FROM ='snd@gmail.com'
- 
-    py_mail("Test email subject", email_content, TO, FROM)
