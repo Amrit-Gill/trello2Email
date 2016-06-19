@@ -8,7 +8,7 @@ import sendEmail
 import datetime
 
 
-def trello2Email(apikey,tocken,boardId,TO,FROM,subject)
+def trello2Email(apikey,tocken,boardId,TO,FROM,subject):
 
 	trello = TrelloApi(apikey)
 	trello.set_token(tocken)
@@ -49,4 +49,4 @@ def trello2Email(apikey,tocken,boardId,TO,FROM,subject)
 		cadNumber.append(cad)
 
 	html = getHtml.getHtmlFromBuf(boardLists, boardcard, cadNumber)
-	htmlEmailTest.py_mail(subject, html, TO, FROM)
+	sendEmail.py_mail(subject, html, TO, FROM)
